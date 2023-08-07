@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Writes a class BaseModel that defines all common attributes/methods for other classes"""
+"""Writes a class BaseModel that defines all common attributes/methods
+for other classes"""
 
 
 import uuid
