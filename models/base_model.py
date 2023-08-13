@@ -6,7 +6,6 @@ for other classes"""
 import uuid
 from datetime import datetime
 import models
-import json
 
 
 class BaseModel():
@@ -45,22 +44,3 @@ class BaseModel():
         new_dict['updated_at'] = self.__dict__['updated_at'].isoformat()
         new_dict['__class__'] = self.__class__.__name__
         return (new_dict)
-
-    """Display BaseModel attributes"""
-    print("[BaseModel] ({}) {}".format(my_model.id, vars(my_model)))
-
-    """Convert BaseModel to a dictionary"""
-    model_dict = {
-            'id': my_model.id,
-            'created_at': my_model.created_at.isoformat(),
-            'updated_at': my_model.updated_at.isoformat(),
-            'name': my_model.name,
-            'my_number': my_model.my_number,
-            '__class__': my_model.__class__.__name__
-            }
-
-    """Display BaseModel dictionary"""
-    print("{}".format(json.dumps(model_dict, indent=4)))
-
-    """Display JSON serialization of my_model"""
-    print("JSON of my_model:\n{}".format(json.dumps(model_dict, indent=4)))
