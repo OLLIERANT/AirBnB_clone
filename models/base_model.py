@@ -6,7 +6,6 @@ for other classes"""
 import uuid
 from datetime import datetime
 import models
-import json
 
 
 class BaseModel():
